@@ -16,41 +16,55 @@ class ProductWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 124,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Stack(
+        alignment: Alignment.topRight,
         children: [
-          ImageComponent(imagePath: imagePath),
-          Text(
-            'Name 1',
-            style: AppTextStyles.productNameTextStyle,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              ImageComponent(imagePath: imagePath),
               Text(
-                'EGP $price',
-                style: AppTextStyles.productPriceTextStyle,
+                'Name 1',
+                style: AppTextStyles.productNameTextStyle,
               ),
-              const Spacer(),
-              CircleAvatar(
-                radius: 8,
-                child: Image.asset(imagePath),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'EGP $price',
+                    style: AppTextStyles.productPriceTextStyle,
+                  ),
+                  const Spacer(),
+                  CircleAvatar(
+                    radius: 8,
+                    child: Image.asset(imagePath),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                      size: 15,
+                    ),
+                    style: const ButtonStyle(
+                        maximumSize: WidgetStatePropertyAll(Size(30, 30)),
+                        minimumSize: WidgetStatePropertyAll(Size(20, 20)),
+                        backgroundColor:
+                            WidgetStatePropertyAll<Color>(AppColors.defaultColor)),
+                  )
+                ],
               ),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.add,
-                  color: Colors.white,
-                  size: 15,
-                ),
-                style: const ButtonStyle(
-                    maximumSize: WidgetStatePropertyAll(Size(30, 30)),
-                    minimumSize: WidgetStatePropertyAll(Size(20, 20)),
-                    backgroundColor:
-                        WidgetStatePropertyAll<Color>(AppColors.defaultColor)),
-              )
             ],
           ),
+          Positioned(
+            right: -5,
+            top: -5,
+            child: IconButton(onPressed: (){}, icon: const CircleAvatar(
+              radius: 15,
+              backgroundColor: AppColors.fillColor,
+              child: Icon(Icons.favorite_border,size: 20,),
+            )),
+          )
         ],
       ),
     );

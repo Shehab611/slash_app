@@ -22,7 +22,7 @@ class SectionWidget extends StatelessWidget {
           height: 210,
           child: ListView.separated(
               padding: const EdgeInsets.symmetric(
-                  vertical: AppSizes.defaultPaddingSize),
+                  vertical: AppSizes.largePaddingSize),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return ProductWidget(
