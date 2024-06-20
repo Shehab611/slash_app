@@ -7,7 +7,7 @@ abstract final class AppSizes {
   /// font size 20
   static const double fontSizeLarge = 20.0;
 
-  /// font size 20
+  /// font size 22
   static const double fontSizeVeryLarge = 22.0;
 
   /// padding size 8

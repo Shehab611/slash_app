@@ -11,7 +11,7 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: Center(
         child: Text(
           'Slash.',
-          style: AppTextStyles.appBarTitleTextStyle,
+          style: AppTextStyles.titleTextStyle,
         ),
       ),
       title: Row(

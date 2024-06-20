@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slash_app/core/utils/design_utils/app_theme.dart';
+import 'package:slash_app/features/home_page/presentation/sections/categories_section/categories_section.dart';
 import 'package:slash_app/features/home_page/presentation/widgets/app_bar.dart';
 import 'package:slash_app/features/home_page/presentation/widgets/search_bar.dart';
 
@@ -25,6 +26,13 @@ class HomeScreen extends StatelessWidget {
                   EdgeInsets.symmetric(vertical: AppSizes.largePaddingSize),
               sliver: SliverToBoxAdapter(
                 child: OffersWidget(),
+              ),
+            ),
+            SliverPadding(
+              padding:
+                  EdgeInsets.symmetric(vertical: AppSizes.largePaddingSize),
+              sliver: SliverToBoxAdapter(
+                child: CategoriesSection(),
               ),
             ),
           ],
