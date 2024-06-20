@@ -5,9 +5,8 @@ import 'package:slash_app/features/home_page/presentation/sections/categories_se
 import 'package:slash_app/features/home_page/presentation/sections/new_arrival_section.dart';
 import 'package:slash_app/features/home_page/presentation/sections/recommended_section.dart';
 import 'package:slash_app/features/home_page/presentation/widgets/app_bar.dart';
+import 'package:slash_app/features/home_page/presentation/widgets/offers.dart';
 import 'package:slash_app/features/home_page/presentation/widgets/search_bar.dart';
-
-import '../widgets/offers.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
