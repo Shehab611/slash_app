@@ -12,6 +12,7 @@ abstract final class AppTheme {
       scaffoldBackgroundColor: Colors.white,
       appBarTheme: const AppBarTheme(
         elevation: 0,
+        scrolledUnderElevation: 0,
         color: Colors.white,
         centerTitle: true,
       ),

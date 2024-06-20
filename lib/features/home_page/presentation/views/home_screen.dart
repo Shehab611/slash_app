@@ -12,54 +12,33 @@ import '../widgets/offers.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  static const widgets = [
+    AppSearchBar(),
+    OffersWidget(),
+    CategoriesSection(),
+    BestSellingSection(),
+    NewArrivalSection(),
+    RecommendedSection()
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: AppDefaultAppBar(),
+    return Scaffold(
+      appBar: const AppDefaultAppBar(),
       body: Padding(
-        padding:
-            EdgeInsets.symmetric(horizontal: AppSizes.veryLargePaddingSize),
+        padding: const EdgeInsets.symmetric(
+            horizontal: AppSizes.veryLargePaddingSize),
         child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: AppSearchBar(),
-            ),
-            SliverPadding(
-              padding:
-                  EdgeInsets.symmetric(vertical: AppSizes.largePaddingSize),
+          slivers: List.generate(
+            widgets.length,
+            (index) => SliverPadding(
+              padding: const EdgeInsets.symmetric(
+                  vertical: AppSizes.largePaddingSize),
               sliver: SliverToBoxAdapter(
-                child: OffersWidget(),
+                child: widgets[index],
               ),
             ),
-            SliverPadding(
-              padding:
-                  EdgeInsets.symmetric(vertical: AppSizes.largePaddingSize),
-              sliver: SliverToBoxAdapter(
-                child: CategoriesSection(),
-              ),
-            ),
-            SliverPadding(
-              padding:
-                  EdgeInsets.symmetric(vertical: AppSizes.largePaddingSize),
-              sliver: SliverToBoxAdapter(
-                child: BestSellingSection(),
-              ),
-            ),
-            SliverPadding(
-              padding:
-                  EdgeInsets.symmetric(vertical: AppSizes.largePaddingSize),
-              sliver: SliverToBoxAdapter(
-                child: NewArrivalSection(),
-              ),
-            ),
-            SliverPadding(
-              padding:
-                  EdgeInsets.symmetric(vertical: AppSizes.largePaddingSize),
-              sliver: SliverToBoxAdapter(
-                child: RecommendedSection(),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
