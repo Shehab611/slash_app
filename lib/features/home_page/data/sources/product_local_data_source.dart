@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:slash_app/core/utils/app_constants/app_constants.dart';
 import 'package:slash_app/features/home_page/data/models/product_model.dart';
 
 abstract interface class BaseProductLocalDataSource {
@@ -14,7 +15,7 @@ abstract interface class BaseProductLocalDataSource {
 final class ProductLocalDataSource implements BaseProductLocalDataSource {
   dynamic _readJson(BuildContext context) async {
     String data = await DefaultAssetBundle.of(context)
-        .loadString("assets/dummy_data/dummyData.json");
+        .loadString(AppConstants.dummyDataPath);
     return jsonDecode(data);
   }
 
@@ -29,16 +30,16 @@ final class ProductLocalDataSource implements BaseProductLocalDataSource {
 
   @override
   Future<List<ProductModel>> getBestSelling(BuildContext context) async {
-    return _getProducts(context, 'bestSelling');
+    return _getProducts(context, AppConstants.bestSellingPath);
   }
 
   @override
   Future<List<ProductModel>> getNewArrival(BuildContext context) async {
-    return _getProducts(context, 'newArrival');
+    return _getProducts(context, AppConstants.newArrivalPath);
   }
 
   @override
   Future<List<ProductModel>> getRecommended(BuildContext context) async {
-    return _getProducts(context, 'recommendedForYou');
+    return _getProducts(context, AppConstants.recommendedPath);
   }
 }
