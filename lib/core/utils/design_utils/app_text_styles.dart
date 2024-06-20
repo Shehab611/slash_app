@@ -18,6 +18,16 @@ abstract final class AppTextStyles {
       fontSize: AppSizes.fontSizeVeryLarge,
       fontWeight: FontWeight.w600);
 
+  static TextStyle productNameTextStyle = GoogleFonts.urbanist(
+      color: AppColors.defaultColor,
+      fontSize: AppSizes.fontSizeNormal,
+      fontWeight: FontWeight.w400);
+
+  static TextStyle productPriceTextStyle = GoogleFonts.urbanist(
+      color: AppColors.defaultColor,
+      fontSize: AppSizes.fontSizeNormal,
+      fontWeight: FontWeight.w700);
+
   //#endregion
 
   //#region App Bar Text Style
@@ -28,7 +38,7 @@ abstract final class AppTextStyles {
 
 //#endregion
 
-//#region Bottom Navigation Bar Text Styles
+  //#region Bottom Navigation Bar Text Styles
   static TextStyle unSelectedTextStyle = GoogleFonts.urbanist(
       color: AppColors.defaultColor,
       fontSize: AppSizes.fontSizeDefault,
