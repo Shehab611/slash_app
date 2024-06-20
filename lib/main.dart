@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slash_app/core/service_locator.dart';
+import 'package:slash_app/core/utils/app_routes_utils/app_router.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,8 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       title: 'Slash App',
+      routes: AppRouter.routes,
+      initialRoute: AppPathName.kHomeScreen,
     );
   }
 }
