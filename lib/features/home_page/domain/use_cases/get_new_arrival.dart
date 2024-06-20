@@ -5,12 +5,12 @@ import 'package:slash_app/features/home_page/domain/entities/product.dart';
 import 'package:slash_app/features/home_page/domain/repositories/product_repository_interface.dart';
 
 final class GetNewArrival implements BaseUseCase<List<Product>> {
-  final BaseProductsRepository productsRepository;
+  final BaseProductsRepository _productsRepository;
 
-  const GetNewArrival(this.productsRepository);
+  const GetNewArrival(this._productsRepository);
 
   @override
   Future<Response<List<Product>>> call(BuildContext context) async {
-    return await productsRepository.getNewArrival(context);
+    return await _productsRepository.getNewArrival(context);
   }
 }
