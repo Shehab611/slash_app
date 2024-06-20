@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:slash_app/core/utils/app_constants/app_constants.dart';
 import 'package:slash_app/core/utils/design_utils/app_theme.dart';
 
 class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget  {
@@ -21,11 +20,11 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget  {
       title: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(AppSizes.defaultPaddingSize),
+          const Padding(
+            padding: EdgeInsets.all(AppSizes.defaultPaddingSize),
             child: Icon(
               Icons.location_pin,
-              color: AppConstants.defaultColor,
+              color: AppColors.defaultColor,
             ),
           ),
           SizedBox(

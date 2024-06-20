@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 abstract final class AppConstants {
 //#region Private Variables
@@ -9,8 +8,6 @@ abstract final class AppConstants {
   static const String _newArrivalPath = 'newArrival';
 
   static const String _recommendedPath = 'recommendedForYou';
-
-  static const Color _defaultColor = Color(0xff292929);
 
 //#endregion
 
@@ -23,6 +20,5 @@ abstract final class AppConstants {
 
   static String get recommendedPath => _recommendedPath;
 
-  static Color get defaultColor => _defaultColor;
 //#endregion
 }
