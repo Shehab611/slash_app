@@ -11,6 +11,7 @@ abstract final class AppTheme {
   static ThemeData defaultTheme = ThemeData(
       scaffoldBackgroundColor: Colors.white,
       appBarTheme: const AppBarTheme(
+        elevation: 0,
         color: Colors.white,
         centerTitle: true,
       ),
