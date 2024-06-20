@@ -6,5 +6,14 @@ part 'app_sizes.dart';
 part 'app_text_styles.dart';
 
 abstract final class AppTheme {
-  static ThemeData defaultTheme = ThemeData();
+  static ThemeData defaultTheme = ThemeData(
+      scaffoldBackgroundColor: Colors.white,
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Colors.white,
+          selectedLabelStyle: AppTextStyles.selectedTextStyle,
+          selectedIconTheme:
+              IconThemeData(size: 30, color: AppConstants.defaultColor),
+          unselectedIconTheme:
+              const IconThemeData(size: 30, color: Colors.black),
+          unselectedLabelStyle: AppTextStyles.unSelectedTextStyle));
 }

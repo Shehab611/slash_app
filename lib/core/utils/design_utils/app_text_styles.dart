@@ -27,4 +27,16 @@ abstract final class AppTextStyles {
       fontWeight: FontWeight.w700);
 
 //#endregion
+
+//#region Bottom Navigation Bar Text Styles
+  static TextStyle unSelectedTextStyle = TextStyle(
+      color: AppConstants.defaultColor,
+      fontSize: AppSizes.fontSizeDefault,
+      fontWeight: FontWeight.w400);
+
+  static TextStyle selectedTextStyle = TextStyle(
+      color: AppConstants.defaultColor,
+      fontSize: AppSizes.fontSizeDefault,
+      fontWeight: FontWeight.w700);
+//#endregion
 }

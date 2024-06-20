@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:slash_app/core/service_locator.dart';
 import 'package:slash_app/core/utils/app_routes_utils/app_router.dart';
+import 'package:slash_app/core/utils/design_utils/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       title: 'Slash App',
+      theme: AppTheme.defaultTheme,
       routes: AppRouter.routes,
       initialRoute: AppPathName.kHomeScreen,
     );
