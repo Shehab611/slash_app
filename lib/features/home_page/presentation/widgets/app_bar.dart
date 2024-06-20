@@ -6,7 +6,6 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQuery.of(context).size;
     return AppBar(
       leadingWidth: 100,
       leading: Center(
