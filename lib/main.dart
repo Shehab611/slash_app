@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       title: 'Slash App',
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.defaultTheme,
       routes: AppRouter.routes,
       initialRoute: AppPathName.kHomeScreen,
