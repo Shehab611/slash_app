@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:slash_app/core/utils/app_constants/app_constants.dart';
 
 part 'app_sizes.dart';
