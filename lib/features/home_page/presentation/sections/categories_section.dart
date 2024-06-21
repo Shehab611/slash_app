@@ -86,11 +86,13 @@ class CategoriesWebSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(shrinkWrap: true,
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: size.width / 4),
+          maxCrossAxisExtent: size.width / 6),
+      itemCount: categories.length,
       itemBuilder: (context, index) {
         return CategoryWidget(
           size: size,
           category: categories[index],
+          isWeb:true
         );
       },
     );

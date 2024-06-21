@@ -23,7 +23,7 @@ class _OffersWidgetState extends State<OffersWidget> {
             options: CarouselOptions(
               viewportFraction: 0.9,
               autoPlay: true,
-              aspectRatio: constraints.maxWidth > 480 ? 4 : 2,
+              aspectRatio: constraints.maxWidth > 480 ? 9 : 2,
               animateToClosest: true,
               enlargeCenterPage: true,
               disableCenter: true,
@@ -37,15 +37,10 @@ class _OffersWidgetState extends State<OffersWidget> {
               return ClipRRect(
                 borderRadius:
                     BorderRadius.circular(AppSizes.defaultPaddingSize),
-                child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius:
-                          BorderRadius.circular(AppSizes.defaultPaddingSize),
-                    ),
-                    child: Image.asset(
-                      'assets/images/carousel_image.png',
-                      fit: BoxFit.cover,
-                    )),
+                child: Image.asset(
+                  'assets/images/carousel_image.png',
+                  fit: constraints.maxWidth > 480 ? BoxFit.fill : BoxFit.cover,
+                ),
               );
             },
           ),
@@ -56,7 +51,9 @@ class _OffersWidgetState extends State<OffersWidget> {
               effect: ExpandingDotsEffect(
                   activeDotColor: AppColors.defaultColor,
                   expansionFactor: 2,
-                  dotHeight: size.width * 0.015,
+                  dotHeight: constraints.maxWidth > 480
+                      ? size.width * 0.01
+                      : size.width * 0.015,
                   dotColor: AppColors.fillColor),
               activeIndex: itemIndex,
             ),
