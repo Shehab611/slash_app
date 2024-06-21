@@ -18,10 +18,11 @@ abstract final class AppTheme {
       ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor: Colors.white,
+          elevation: 0,
           selectedLabelStyle: AppTextStyles.selectedTextStyle,
           selectedIconTheme:
               const IconThemeData(size: 30, color: AppColors.defaultColor),
           unselectedIconTheme:
-              const IconThemeData(size: 30, color: Colors.black),
+              const IconThemeData(size: 30, color: AppColors.defaultColor),
           unselectedLabelStyle: AppTextStyles.unSelectedTextStyle));
 }
