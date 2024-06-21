@@ -8,7 +8,9 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="45g45" alt="project-screenshot" width="44" height="45/">
+<img src="![WhatsApp Image 2024-06-21 at 23 03 42_36c0b935](https://github.com/Shehab611/slash_app/assets/77563526/6b62745d-e8b9-4c62-b13a-44030eb8e7ec)" alt="project-screenshot" width="250" height="520/">
+<img src="![WhatsApp Image 2024-06-21 at 23 03 39_9ef9f0ea](https://github.com/Shehab611/slash_app/assets/77563526/5165ed44-264a-4215-ba86-f2e94753c671)" alt="project-screenshot" width="250" height="520/">
+
 
   
   
