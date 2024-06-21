@@ -4,7 +4,7 @@
 
 <h2>🚀 Demo</h2>
 
-[ergerge](ergerge)
+[https://drive.google.com/file/d/1Ye3869fy38vqqkCQFoWwRoxkMEJydbXs/view?usp=drive_link](https://drive.google.com/file/d/1Ye3869fy38vqqkCQFoWwRoxkMEJydbXs/view?usp=drive_link)
 
 <h2>Project Screenshots:</h2>
 
@@ -27,7 +27,7 @@ Here are some of the project's best features:
 <p>1. Clone the Repo</p>
 
 ```
-git clone https://github.com/mennamohamed97/Slash_Home_Task.git
+git clone https://github.com/Shehab611/slash_app.git
 ```
 
 <p>2. Go to directory</p>
