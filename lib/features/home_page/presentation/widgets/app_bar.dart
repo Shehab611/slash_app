@@ -3,8 +3,8 @@ import 'package:slash_app/core/utils/app_routes_utils/app_router.dart';
 import 'package:slash_app/core/utils/design_utils/app_theme.dart';
 
 class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const AppDefaultAppBar({super.key});
-
+  const AppDefaultAppBar({super.key, required this.isWeb});
+  final bool isWeb;
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;

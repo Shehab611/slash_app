@@ -50,8 +50,49 @@ class BottomNavBarCubit extends Cubit<BottomNavBarState> {
     ),
   ];
 
+  final List<BottomNavigationBarItem> _rotatedItems = [
+    BottomNavigationBarItem(
+      icon: Transform.rotate(
+        angle: -90 * (3.14 / 180),
+        child: const Icon(
+          Icons.home_filled,
+        ),
+      ),
+      label: 'Home',
+    ),
+    BottomNavigationBarItem(
+      icon: Transform.rotate(
+        angle: -90 * (3.14 / 180),
+        child: const Icon(
+          Icons.favorite_border_outlined,
+        ),
+      ),
+      label: 'Favourites',
+    ),
+    BottomNavigationBarItem(
+      icon: Transform.rotate(
+        angle: -90 * (3.14 / 180),
+        child: const Icon(
+          Icons.shopping_cart,
+        ),
+      ),
+      label: 'My Cart',
+    ),
+    BottomNavigationBarItem(
+      icon: Transform.rotate(
+        angle: -90 * (3.14 / 180),
+        child: const Icon(
+          Icons.person_pin,
+        ),
+      ),
+      label: 'Profile',
+    ),
+  ];
+
   // getters
   List<BottomNavigationBarItem> get items => _items;
+
+  List<BottomNavigationBarItem> get rotatedItems => _rotatedItems;
 
   int get currentIndex => _currentIndex;
 
