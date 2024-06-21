@@ -19,8 +19,8 @@ final class ProductLocalDataSource implements BaseProductLocalDataSource {
     return jsonDecode(data);
   }
 
-  List<ProductModel> _getProducts(BuildContext context, String key) {
-    final jsonResult = _readJson(context);
+  Future<List<ProductModel>> _getProducts(BuildContext context, String key) async{
+    final jsonResult = await _readJson(context);
     final List<ProductModel> products = [];
     for (var json in jsonResult[key]) {
       products.add(ProductModel.fromJson(json));
@@ -30,16 +30,16 @@ final class ProductLocalDataSource implements BaseProductLocalDataSource {
 
   @override
   Future<List<ProductModel>> getBestSelling(BuildContext context) async {
-    return _getProducts(context, AppConstants.bestSellingPath);
+    return await _getProducts(context, AppConstants.bestSellingPath);
   }
 
   @override
   Future<List<ProductModel>> getNewArrival(BuildContext context) async {
-    return _getProducts(context, AppConstants.newArrivalPath);
+    return await _getProducts(context, AppConstants.newArrivalPath);
   }
 
   @override
   Future<List<ProductModel>> getRecommended(BuildContext context) async {
-    return _getProducts(context, AppConstants.recommendedPath);
+    return await _getProducts(context, AppConstants.recommendedPath);
   }
 }
