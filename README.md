@@ -10,7 +10,7 @@
 
 <img src="https://github.com/Shehab611/slash_app/assets/77563526/6b62745d-e8b9-4c62-b13a-44030eb8e7ec" alt="project-screenshot" width="250" height="520/">
 <img src="https://github.com/Shehab611/slash_app/assets/77563526/5165ed44-264a-4215-ba86-f2e94753c671" alt="project-screenshot" width="250" height="520/">
-<img src="https://github.com/Shehab611/slash_app/assets/77563526/c8d48626-299b-4d61-8c9d-67d61f8219ab" alt="project-screenshot" width="520" height="250/">
+<img src="https://github.com/Shehab611/slash_app/assets/77563526/c8d48626-299b-4d61-8c9d-67d61f8219ab" alt="project-screenshot" width="700" height="350/">
 
   
   
