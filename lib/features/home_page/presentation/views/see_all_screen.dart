@@ -15,6 +15,7 @@ class SeeAllScreen extends StatelessWidget {
         child: Text(
           'See All $screenName Screen',
           style: AppTextStyles.defaultTextStyle,
+          textScaler: TextScaler.linear(ScaleSize.textScaleFactor(context)),
         ),
       ),
     );

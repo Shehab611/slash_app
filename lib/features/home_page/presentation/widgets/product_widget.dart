@@ -15,65 +15,65 @@ class ProductWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return SizedBox(
-      width: size.width * 0.37,
-      child: Stack(
-        alignment: Alignment.topRight,
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ImageComponent(imagePath: imagePath),
-              Text(
-                'Name 1',
-                style: AppTextStyles.productNameTextStyle,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'EGP $price',
-                    style: AppTextStyles.productPriceTextStyle,
-                  ),
-                  const Spacer(),
-                  CircleAvatar(
-                    radius: 8,
+    return Stack(
+      alignment: Alignment.topRight,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ImageComponent(imagePath: imagePath),
+            Text(
+              name,
+              style: AppTextStyles.productNameTextStyle,
+              textScaler: TextScaler.linear(ScaleSize.textScaleFactor(context)),            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  'EGP $price',
+                  style: AppTextStyles.productPriceTextStyle,
+                  textScaler: TextScaler.linear(ScaleSize.textScaleFactor(context)),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(AppSizes.defaultPaddingSize),
+                  child: CircleAvatar(
+                    radius: size.width * 0.024,
                     child: Image.asset(imagePath),
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.add,
-                      color: Colors.white,
-                      size: 15,
-                    ),
-                    style: const ButtonStyle(
-                        maximumSize: WidgetStatePropertyAll(Size(30, 30)),
-                        minimumSize: WidgetStatePropertyAll(Size(20, 20)),
-                        backgroundColor: WidgetStatePropertyAll<Color>(
-                            AppColors.defaultColor)),
-                  )
-                ],
-              ),
-            ],
-          ),
-          Positioned(
-            right: -5,
-            top: -5,
-            child: IconButton(
-                onPressed: () {},
-                icon: const CircleAvatar(
-                  radius: 15,
-                  backgroundColor: AppColors.fillColor,
-                  child: Icon(
-                    Icons.favorite_border,
-                    size: 20,
-                    color: AppColors.defaultColor,
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.add,
+                    color: Colors.white,
+                    size: size.width * 0.044,
                   ),
-                )),
-          )
-        ],
-      ),
+                  style: const ButtonStyle(
+                      maximumSize: WidgetStatePropertyAll(Size(30, 30)),
+                      minimumSize: WidgetStatePropertyAll(Size(20, 20)),
+                      backgroundColor: WidgetStatePropertyAll<Color>(
+                          AppColors.defaultColor)),
+                )
+              ],
+            ),
+          ],
+        ),
+        Positioned(
+          right: -5,
+          top: -5,
+          child: IconButton(
+              onPressed: () {},
+              icon: CircleAvatar(
+                radius: size.width * 0.05,
+                backgroundColor: AppColors.fillColor,
+                child: Icon(
+                  Icons.favorite_border,
+                  size: size.width * 0.06,
+                  color: AppColors.defaultColor,
+                ),
+              )),
+        )
+      ],
     );
   }
 }

@@ -7,12 +7,14 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return AppBar(
-      leadingWidth: 100,
+      leadingWidth: size.width * 0.29,
       leading: Center(
         child: Text(
           'Slash.',
           style: AppTextStyles.titleTextStyle,
+          textScaler: TextScaler.linear(ScaleSize.textScaleFactor(context)),
         ),
       ),
       title: Row(
@@ -26,7 +28,7 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
           SizedBox(
-            width: 95,
+            width: size.width * 0.27,
             child: DropdownButtonHideUnderline(
               child: DropdownButton(
                 items: [
@@ -35,6 +37,7 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
                     child: Text(
                       'Nasr City Cairo',
                       style: AppTextStyles.defaultTextStyle,
+                      textScaler: TextScaler.linear(ScaleSize.textScaleFactor(context)),
                     ),
                   )
                 ],
@@ -57,14 +60,14 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
                   AppNavigator.navigateToNotificationsScreen(context);
                 },
                 icon: const Icon(Icons.notifications_none),
-                iconSize: 30,
+                iconSize: size.width * 0.09,
               ),
-              const Positioned(
+               Positioned(
                 right: 15,
                 top: 15,
                 child: CircleAvatar(
                   backgroundColor: Colors.red,
-                  radius: 4,
+                  radius: size.width * 0.014,
                 ),
               )
             ],

@@ -15,11 +15,12 @@ class SeeAllComponent extends StatelessWidget {
           Text(
             'See all',
             style: AppTextStyles.defaultTextStyle,
+            textScaler: TextScaler.linear(ScaleSize.textScaleFactor(context)),
           ),
           Container(
             margin: const EdgeInsets.only(left: AppSizes.defaultPaddingSize),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(4),
+                borderRadius: BorderRadius.circular(AppSizes.defaultPaddingSize),
                 color: AppColors.fillColor),
             child: const Icon(
               Icons.arrow_forward_ios_sharp,

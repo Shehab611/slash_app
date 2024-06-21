@@ -26,7 +26,7 @@ class SectionWidget extends StatelessWidget {
           onTap: onTap,
         ),
         SizedBox(
-          height: size.height * 0.28,
+          height: size.height * 0.35,
           child: Visibility(
             visible: products.isNotEmpty,
             replacement: const CustomLoader(),
@@ -41,8 +41,8 @@ class SectionWidget extends StatelessWidget {
                     price: products[index].price,
                   );
                 },
-                separatorBuilder: (context, index) => const SizedBox(
-                      width: 4,
+                separatorBuilder: (context, index) =>  SizedBox(
+                      width: size.width * 0.02,
                     ),
                 itemCount: products.length),
           ),

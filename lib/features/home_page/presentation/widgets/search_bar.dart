@@ -16,10 +16,10 @@ class AppSearchBar extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 8.0),
+          padding: const EdgeInsets.only(left: AppSizes.defaultPaddingSize),
           child: Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(AppSizes.defaultPaddingSize),
               color: AppColors.fillColor,
             ),
             child: IconButton(

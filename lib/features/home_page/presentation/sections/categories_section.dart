@@ -16,6 +16,7 @@ class CategoriesSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Column(
       children: [
         TitleRowComponent(
@@ -25,7 +26,7 @@ class CategoriesSection extends StatelessWidget {
           },
         ),
         SizedBox(
-          height: 115,
+          height: size.height * 0.17,
           child: ListView.separated(
               padding: const EdgeInsets.symmetric(
                   vertical: AppSizes.defaultPaddingSize),
@@ -35,7 +36,7 @@ class CategoriesSection extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CircleAvatar(
-                      radius: 36,
+                      radius: size.width * 0.1,
                       backgroundColor: AppColors.defaultColor,
                       child: Image.asset(
                           'assets/images/categories_images/${categories[index]}.png'),
@@ -43,12 +44,13 @@ class CategoriesSection extends StatelessWidget {
                     Text(
                       categories[index],
                       style: AppTextStyles.defaultTextStyle,
+                      textScaler: TextScaler.linear(ScaleSize.textScaleFactor(context)),
                     )
                   ],
                 );
               },
-              separatorBuilder: (context, index) => const SizedBox(
-                    width: 4,
+              separatorBuilder: (context, index) =>  SizedBox(
+                    width: size.width * 0.02,
                   ),
               itemCount: categories.length),
         )

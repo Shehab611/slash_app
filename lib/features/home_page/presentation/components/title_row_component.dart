@@ -17,6 +17,7 @@ class TitleRowComponent extends StatelessWidget {
         Text(
           headerText,
           style: AppTextStyles.itemTextStyle,
+          textScaler: TextScaler.linear(ScaleSize.textScaleFactor(context)),
         ),
         SeeAllComponent(
           onTap: onTap,

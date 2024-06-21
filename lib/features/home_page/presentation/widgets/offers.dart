@@ -15,6 +15,7 @@ class _OffersWidgetState extends State<OffersWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Column(
       children: [
         CarouselSlider.builder(
@@ -50,10 +51,10 @@ class _OffersWidgetState extends State<OffersWidget> {
           padding: const EdgeInsets.only(top: AppSizes.defaultPaddingSize),
           child: AnimatedSmoothIndicator(
             count: 2,
-            effect: const ExpandingDotsEffect(
+            effect:  ExpandingDotsEffect(
                 activeDotColor: AppColors.defaultColor,
                 expansionFactor: 2,
-                dotHeight: 10,
+                dotHeight: size.width * 0.015,
                 dotColor: AppColors.fillColor),
             activeIndex: itemIndex,
           ),

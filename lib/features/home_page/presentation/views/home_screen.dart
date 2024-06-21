@@ -29,8 +29,8 @@ class HomeScreen extends StatelessWidget {
           slivers: List.generate(
             widgets.length,
             (index) => SliverPadding(
-              padding: const EdgeInsets.symmetric(
-                  vertical: AppSizes.largePaddingSize),
+              padding: const EdgeInsets.only(
+                  top: AppSizes.largePaddingSize),
               sliver: SliverToBoxAdapter(
                 child: widgets[index],
               ),

@@ -8,12 +8,15 @@ class ImageComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return ClipRRect(
       borderRadius: BorderRadius.circular(AppSizes.defaultPaddingSize),
       clipBehavior: Clip.hardEdge,
       child: Image.asset(
         imagePath,
-        fit: BoxFit.cover,
+        height: size.height * 0.2,
+        width: size.width * 0.38,
+        fit: BoxFit.contain,
       ),
     );
   }
