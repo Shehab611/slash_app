@@ -16,7 +16,7 @@ class BaseScreen extends StatelessWidget {
           appBar: const AppDefaultAppBar(),
           bottomNavigationBar: BottomNavigationBar(
             fixedColor: AppColors.defaultColor,
-            items:cubit.items,
+            items: cubit.items,
             currentIndex: cubit.currentIndex,
             onTap: (int index) => cubit.changeIndex = index,
             type: BottomNavigationBarType.fixed,

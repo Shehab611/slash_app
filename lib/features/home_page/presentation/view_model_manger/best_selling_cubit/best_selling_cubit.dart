@@ -10,7 +10,7 @@ class BestSellingCubit extends Cubit<BestSellingState> {
   BestSellingCubit(this.getBestSelling) : super(const BestSellingInitial());
 
   //#region Private Variables
-  final GetBestSelling getBestSelling;
+  final GetBestSellingImpl getBestSelling;
 
 //#endregion
 

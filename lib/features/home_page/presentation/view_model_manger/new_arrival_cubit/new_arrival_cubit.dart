@@ -10,7 +10,7 @@ class NewArrivalCubit extends Cubit<NewArrivalState> {
   NewArrivalCubit(this.getNewArrival) : super(const NewArrivalInitial());
 
   //#region Private Variables
-  final GetNewArrival getNewArrival;
+  final GetNewArrivalImpl getNewArrival;
 
 //#endregion
 

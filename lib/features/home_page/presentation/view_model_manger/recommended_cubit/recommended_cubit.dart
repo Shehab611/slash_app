@@ -10,7 +10,7 @@ class RecommendedCubit extends Cubit<RecommendedState> {
   RecommendedCubit(this.getRecommended) : super(const RecommendedInitial());
 
   //#region Private Variables
-  final GetRecommended getRecommended;
+  final GetRecommendedImpl getRecommended;
 
 //#endregion
 

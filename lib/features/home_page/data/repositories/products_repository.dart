@@ -4,10 +4,10 @@ import 'package:slash_app/features/home_page/data/sources/product_local_data_sou
 import 'package:slash_app/features/home_page/domain/entities/product.dart';
 import 'package:slash_app/features/home_page/domain/repositories/product_repository_interface.dart';
 
-final class ProductsRepository implements BaseProductsRepository {
-  final BaseProductLocalDataSource _dataSource;
+final class ProductsRepositoryImpl implements ProductsRepositoryInterface {
+  final ProductLocalDataSourceInterface _dataSource;
 
-  const ProductsRepository(this._dataSource);
+  const ProductsRepositoryImpl(this._dataSource);
 
   @override
   Future<Response<List<Product>>> getBestSelling(BuildContext context) async {

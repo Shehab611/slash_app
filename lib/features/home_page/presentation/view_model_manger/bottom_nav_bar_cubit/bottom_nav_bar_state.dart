@@ -1,6 +1,5 @@
 part of 'bottom_nav_bar_cubit.dart';
 
-
 sealed class BottomNavBarState extends Equatable {
   const BottomNavBarState();
 }
@@ -21,18 +20,21 @@ class BottomNavBarHomeScreen extends BottomNavBarState {
 
 class BottomNavBarSearchScreen extends BottomNavBarState {
   const BottomNavBarSearchScreen();
+
   @override
   List<Object> get props => [];
 }
 
 class BottomNavBarWishListScreen extends BottomNavBarState {
   const BottomNavBarWishListScreen();
+
   @override
   List<Object> get props => [];
 }
 
 class BottomNavBarAccountSettingsScreen extends BottomNavBarState {
   const BottomNavBarAccountSettingsScreen();
+
   @override
   List<Object> get props => [];
 }

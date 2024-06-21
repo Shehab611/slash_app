@@ -14,8 +14,9 @@ class ProductWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return SizedBox(
-      width: 124,
+      width: size.width * 0.37,
       child: Stack(
         alignment: Alignment.topRight,
         children: [
@@ -49,8 +50,8 @@ class ProductWidget extends StatelessWidget {
                     style: const ButtonStyle(
                         maximumSize: WidgetStatePropertyAll(Size(30, 30)),
                         minimumSize: WidgetStatePropertyAll(Size(20, 20)),
-                        backgroundColor:
-                            WidgetStatePropertyAll<Color>(AppColors.defaultColor)),
+                        backgroundColor: WidgetStatePropertyAll<Color>(
+                            AppColors.defaultColor)),
                   )
                 ],
               ),
@@ -59,11 +60,17 @@ class ProductWidget extends StatelessWidget {
           Positioned(
             right: -5,
             top: -5,
-            child: IconButton(onPressed: (){}, icon: const CircleAvatar(
-              radius: 15,
-              backgroundColor: AppColors.fillColor,
-              child: Icon(Icons.favorite_border,size: 20,),
-            )),
+            child: IconButton(
+                onPressed: () {},
+                icon: const CircleAvatar(
+                  radius: 15,
+                  backgroundColor: AppColors.fillColor,
+                  child: Icon(
+                    Icons.favorite_border,
+                    size: 20,
+                    color: AppColors.defaultColor,
+                  ),
+                )),
           )
         ],
       ),

@@ -18,7 +18,7 @@ class CategoriesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-         TitleRowComponent(
+        TitleRowComponent(
           headerText: 'Categories',
           onTap: () {
             AppNavigator.navigateToSeeAllScreen(context, 'Categories');

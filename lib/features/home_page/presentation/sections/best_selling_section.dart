@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:slash_app/core/components/custom_loader.dart';
+import 'package:slash_app/core/components/custom_components/custom_loader.dart';
 import 'package:slash_app/core/utils/app_routes_utils/app_router.dart';
 import 'package:slash_app/features/home_page/presentation/view_model_manger/best_selling_cubit/best_selling_cubit.dart';
 import 'package:slash_app/features/home_page/presentation/widgets/section_widget.dart';

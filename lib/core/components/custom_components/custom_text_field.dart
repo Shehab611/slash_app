@@ -74,7 +74,7 @@ class CustomTextField extends StatefulWidget {
       this.suffixOnTap,
       this.fillColor = AppColors.fillColor,
       this.iconColor = AppColors.searchIconColor,
-      this.cursorColor =AppColors.defaultColor,
+      this.cursorColor = AppColors.defaultColor,
       this.labelColor = AppColors.searchLabelColor,
       this.textColor = AppColors.defaultColor,
       this.floatingLabelColor = Colors.blueAccent});

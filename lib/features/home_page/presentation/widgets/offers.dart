@@ -53,7 +53,7 @@ class _OffersWidgetState extends State<OffersWidget> {
             effect: const ExpandingDotsEffect(
                 activeDotColor: AppColors.defaultColor,
                 expansionFactor: 2,
-                dotHeight:10 ,
+                dotHeight: 10,
                 dotColor: AppColors.fillColor),
             activeIndex: itemIndex,
           ),

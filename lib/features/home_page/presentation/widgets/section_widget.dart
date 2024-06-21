@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:slash_app/core/components/custom_loader.dart';
+import 'package:slash_app/core/components/custom_components/custom_loader.dart';
 import 'package:slash_app/core/utils/design_utils/app_theme.dart';
 import 'package:slash_app/features/home_page/domain/entities/product.dart';
 import 'package:slash_app/features/home_page/presentation/components/title_row_component.dart';
@@ -18,6 +18,7 @@ class SectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Column(
       children: [
         TitleRowComponent(
@@ -25,7 +26,7 @@ class SectionWidget extends StatelessWidget {
           onTap: onTap,
         ),
         SizedBox(
-          height: 210,
+          height: size.height * 0.28,
           child: Visibility(
             visible: products.isNotEmpty,
             replacement: const CustomLoader(),

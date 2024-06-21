@@ -1,4 +1,3 @@
-
 abstract final class AppConstants {
 //#region Private Variables
   static const String _dummyDataPath = 'assets/dummy_data/dummyData.json';

@@ -23,13 +23,13 @@ abstract final class AppRouter {
           providers: [
             BlocProvider(create: (context) => BottomNavBarCubit()),
             BlocProvider(
-                create: (context) => BestSellingCubit(GetBestSelling(sl.get()))
+                create: (context) => BestSellingCubit(GetBestSellingImpl(sl.get()))
                   ..getBestSellingData(context)),
             BlocProvider(
-                create: (context) => NewArrivalCubit(GetNewArrival(sl.get()))
+                create: (context) => NewArrivalCubit(GetNewArrivalImpl(sl.get()))
                   ..getNewArrivalData(context)),
             BlocProvider(
-                create: (context) => RecommendedCubit(GetRecommended(sl.get()))
+                create: (context) => RecommendedCubit(GetRecommendedImpl(sl.get()))
                   ..getRecommendedData(context)),
           ],
           child: const BaseScreen(),

@@ -7,12 +7,12 @@ final sl = GetIt.instance;
 
 Future<void> initServicesLocator() async {
   //#region Repos
-  sl.registerLazySingleton<BaseProductsRepository>(
-      () => ProductsRepository(sl.get()));
+  sl.registerLazySingleton<ProductsRepositoryInterface>(
+      () => ProductsRepositoryImpl(sl.get()));
   //#endregion
 
   //#region Data Sources
-  sl.registerLazySingleton<BaseProductLocalDataSource>(
-      () => ProductLocalDataSource());
+  sl.registerLazySingleton<ProductLocalDataSourceInterface>(
+      () => ProductLocalDataSourceImpl());
   //#endregion
 }
