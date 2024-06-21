@@ -6,10 +6,14 @@ import 'package:slash_app/features/home_page/presentation/widgets/product_widget
 
 class SectionWidget extends StatelessWidget {
   const SectionWidget(
-      {super.key, required this.headerText, required this.products});
+      {super.key,
+      required this.headerText,
+      required this.products,
+      this.onTap});
 
   final String headerText;
   final List<ProductModel> products;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +21,7 @@ class SectionWidget extends StatelessWidget {
       children: [
         TitleRowComponent(
           headerText: headerText,
+          onTap: onTap,
         ),
         SizedBox(
           height: 210,

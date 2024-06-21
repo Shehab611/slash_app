@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slash_app/core/utils/app_routes_utils/app_router.dart';
 import 'package:slash_app/core/utils/design_utils/app_theme.dart';
 import 'package:slash_app/features/home_page/presentation/components/title_row_component.dart';
 
@@ -17,8 +18,11 @@ class CategoriesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const TitleRowComponent(
+         TitleRowComponent(
           headerText: 'Categories',
+          onTap: () {
+            AppNavigator.navigateToSeeAllScreen(context, 'Categories');
+          },
         ),
         SizedBox(
           height: 115,

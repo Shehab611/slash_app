@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slash_app/core/utils/app_routes_utils/app_router.dart';
 import 'package:slash_app/features/home_page/data/models/product_model.dart';
 import 'package:slash_app/features/home_page/presentation/widgets/section_widget.dart';
 
@@ -11,6 +12,9 @@ class RecommendedSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return SectionWidget(
         headerText: 'Recommended for you',
+        onTap: () {
+          AppNavigator.navigateToSeeAllScreen(context, 'Recommended');
+        },
         products: List.generate(
           5,
           (index) => ProductModel(

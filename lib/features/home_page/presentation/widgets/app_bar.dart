@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:slash_app/core/utils/app_routes_utils/app_router.dart';
 import 'package:slash_app/core/utils/design_utils/app_theme.dart';
 
 class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -52,7 +53,9 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
             alignment: Alignment.topRight,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  AppNavigator.navigateToNotificationsScreen(context);
+                },
                 icon: const Icon(Icons.notifications_none),
                 iconSize: 30,
               ),
