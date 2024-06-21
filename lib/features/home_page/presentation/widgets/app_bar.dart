@@ -4,7 +4,9 @@ import 'package:slash_app/core/utils/design_utils/app_theme.dart';
 
 class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
   const AppDefaultAppBar({super.key, required this.isWeb});
+
   final bool isWeb;
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -28,7 +30,7 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
           SizedBox(
-            width: size.width * 0.27,
+            width: isWeb ? size.width * 0.2 : size.width * 0.27,
             child: DropdownButtonHideUnderline(
               child: DropdownButton(
                 items: [
@@ -37,7 +39,8 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
                     child: Text(
                       'Nasr City Cairo',
                       style: AppTextStyles.defaultTextStyle,
-                      textScaler: TextScaler.linear(ScaleSize.textScaleFactor(context)),
+                      textScaler:
+                          TextScaler.linear(ScaleSize.textScaleFactor(context)),
                     ),
                   )
                 ],
@@ -60,14 +63,14 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
                   AppNavigator.navigateToNotificationsScreen(context);
                 },
                 icon: const Icon(Icons.notifications_none),
-                iconSize: size.width * 0.09,
+                iconSize: isWeb ? size.width * 0.04 : size.width * 0.09,
               ),
-               Positioned(
+              Positioned(
                 right: 15,
                 top: 15,
                 child: CircleAvatar(
                   backgroundColor: Colors.red,
-                  radius: size.width * 0.014,
+                  radius: isWeb ?size.width * 0.007: size.width * 0.014,
                 ),
               )
             ],
