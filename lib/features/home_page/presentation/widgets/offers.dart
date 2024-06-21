@@ -16,50 +16,53 @@ class _OffersWidgetState extends State<OffersWidget> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return Column(
-      children: [
-        CarouselSlider.builder(
-          options: CarouselOptions(
-            viewportFraction: 0.9,
-            autoPlay: true,
-            aspectRatio: 2,
-            animateToClosest: true,
-            enlargeCenterPage: true,
-            disableCenter: true,
-            padEnds: false,
-            onPageChanged: (index, reason) => setState(() {
-              itemIndex = index;
-            }),
+    return LayoutBuilder(builder: (context, constraints) {
+      return Column(
+        children: [
+          CarouselSlider.builder(
+            options: CarouselOptions(
+              viewportFraction: 0.9,
+              autoPlay: true,
+              aspectRatio: constraints.maxWidth > 480 ? 4 : 2,
+              animateToClosest: true,
+              enlargeCenterPage: true,
+              disableCenter: true,
+              padEnds: false,
+              onPageChanged: (index, reason) => setState(() {
+                itemIndex = index;
+              }),
+            ),
+            itemCount: 2,
+            itemBuilder: (context, index, _) {
+              return ClipRRect(
+                borderRadius:
+                    BorderRadius.circular(AppSizes.defaultPaddingSize),
+                child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius:
+                          BorderRadius.circular(AppSizes.defaultPaddingSize),
+                    ),
+                    child: Image.asset(
+                      'assets/images/carousel_image.png',
+                      fit: BoxFit.cover,
+                    )),
+              );
+            },
           ),
-          itemCount: 2,
-          itemBuilder: (context, index, _) {
-            return ClipRRect(
-              borderRadius: BorderRadius.circular(AppSizes.defaultPaddingSize),
-              child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius:
-                        BorderRadius.circular(AppSizes.defaultPaddingSize),
-                  ),
-                  child: Image.asset(
-                    'assets/images/carousel_image.png',
-                    fit: BoxFit.cover,
-                  )),
-            );
-          },
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: AppSizes.defaultPaddingSize),
-          child: AnimatedSmoothIndicator(
-            count: 2,
-            effect:  ExpandingDotsEffect(
-                activeDotColor: AppColors.defaultColor,
-                expansionFactor: 2,
-                dotHeight: size.width * 0.015,
-                dotColor: AppColors.fillColor),
-            activeIndex: itemIndex,
-          ),
-        )
-      ],
-    );
+          Padding(
+            padding: const EdgeInsets.only(top: AppSizes.defaultPaddingSize),
+            child: AnimatedSmoothIndicator(
+              count: 2,
+              effect: ExpandingDotsEffect(
+                  activeDotColor: AppColors.defaultColor,
+                  expansionFactor: 2,
+                  dotHeight: size.width * 0.015,
+                  dotColor: AppColors.fillColor),
+              activeIndex: itemIndex,
+            ),
+          )
+        ],
+      );
+    });
   }
 }

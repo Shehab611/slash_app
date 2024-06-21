@@ -70,7 +70,7 @@ class AppDefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
                 top: 15,
                 child: CircleAvatar(
                   backgroundColor: Colors.red,
-                  radius: isWeb ?size.width * 0.007: size.width * 0.014,
+                  radius: isWeb ? size.width * 0.007 : size.width * 0.014,
                 ),
               )
             ],
