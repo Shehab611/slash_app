@@ -1,7 +1,10 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:slash_app/features/favourites/presentation/views/favourites_screen.dart';
 import 'package:slash_app/features/home_page/presentation/views/home_screen.dart';
+import 'package:slash_app/features/my_cart/presentation/views/my_cart_screen.dart';
+import 'package:slash_app/features/profile/presentation/views/profile_screen.dart';
 
 part 'bottom_nav_bar_state.dart';
 
@@ -15,6 +18,9 @@ class BottomNavBarCubit extends Cubit<BottomNavBarState> {
 
   final List<Widget> _screens = const [
     HomeScreen(),
+    FavouritesScreen(),
+    MyCartScreen(),
+    ProfileScreen()
   ];
 
   final List<BottomNavigationBarItem> _items = const [
